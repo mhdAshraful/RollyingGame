@@ -1,35 +1,42 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { KeyboardControls } from '@react-three/drei'
+import { Canvas } from '@react-three/fiber'
+import Experience from './Experience/Experience.jsx'
+import Interface from './Interface.jsx'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
+  // console.log('app')
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
+    <KeyboardControls
+      map={[
+        { name: "forward", keys: ["ArrowUp", "KeyW"] },
+        { name: "backward", keys: ["ArrowDown", "KeyS"] },
+        { name: "leftward", keys: ["ArrowLeft", "KeyA"] },
+        { name: "rightward", keys: ["ArrowRight", "KeyD"] },
+        { name: "jump", keys: ["Space"] },
+      ]}
+    >
+
+      <Canvas
+        shadows
+        gl={{
+          powerPreference: "high-performance",
+          antialias: true,
+          stencil: true,
+          depth: true
+        }}
+        camera={{
+          fov: 35,
+          near: 0.1,
+          far: 1000,
+          position: [3, 15, 20]
+        }}
+      >
+
+        <Experience />
+      </Canvas>
+      <Interface />
+    </KeyboardControls>
   )
 }
 
-export default App
+

@@ -9,15 +9,14 @@ export default defineConfig({
     react(),
     glsl()
   ],
-  root: './', // if index.html is inside src then "src/"
+  root: 'src/', // if index.html is inside src then "src/"
   base: './',
-  publicDir: './public',
+  publicDir: '../public/',
   server: {
     host: true,
-    open: './index.html'
   },
   build: {
-    outDir: './dist',
+    outDir: '../dist',
     emptyOutDir: true,
     sourcemap: true
   }
