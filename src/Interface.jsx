@@ -61,15 +61,15 @@ const Interface = () => {
             {/* controls */}
             <div className="controls">
                 <div className="row">
-                    <div className={`key ${forward ? "active" : ""}`}></div>
+                    <div className={`key ${forward ? "active" : ""}`} ></div>
                 </div>
                 <div className="row">
-                    <div className={` key ${leftward ? "active" : ""} `}></div>
-                    <div className={` key  ${backward ? "active" : ""} `}></div>
-                    <div className={` key ${rightward ? "active" : ""} `}></div>
+                    <div className={` key ${leftward ? "active" : ""} `}  ></div>
+                    <div className={` key  ${backward ? "active" : ""} `}  ></div>
+                    <div className={` key ${rightward ? "active" : ""} `}  ></div>
                 </div>
                 <div className="row">
-                    <div className={`key large ${jump ? "active" : ""} `}></div>
+                    <div className={`key large ${jump ? "active" : ""} `}  ></div>
                 </div>
             </div>
         </div>

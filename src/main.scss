@@ -70,6 +70,8 @@ padding: 0;
         background-color: #00000033;
         border: 0.2rem solid #f9f9f9e9;
         border-radius: 0.4rem;
+        pointer-events: auto;
+        cursor: pointer;
         &.active{
             background-color: #efe9e9b5;
         }
