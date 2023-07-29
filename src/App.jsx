@@ -1,7 +1,8 @@
-import { KeyboardControls } from '@react-three/drei'
-import { Canvas } from '@react-three/fiber'
-import Experience from './Experience/Experience.jsx'
-import Interface from './Interface.jsx'
+import { KeyboardControls } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
+import Experience from "./Experience/Experience.jsx";
+import Interface from "./Interface.jsx";
+import { Perf } from "r3f-perf";
 
 export default function App() {
   // console.log('app')
@@ -15,28 +16,25 @@ export default function App() {
         { name: "jump", keys: ["Space"] },
       ]}
     >
-
       <Canvas
         shadows
         gl={{
           powerPreference: "high-performance",
           antialias: true,
           stencil: true,
-          depth: true
+          depth: true,
         }}
         camera={{
           fov: 35,
           near: 0.1,
           far: 1000,
-          position: [3, 15, 20]
+          position: [3, 15, 20],
         }}
       >
-
+        <Perf />
         <Experience />
       </Canvas>
       <Interface />
     </KeyboardControls>
-  )
+  );
 }
-
-
