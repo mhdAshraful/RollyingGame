@@ -1,6 +1,7 @@
 # RollinGame
 
 ## Table of Contents
+![Vite _ React](https://github.com/user-attachments/assets/299b9f99-9618-4012-add9-3d1f18911207)
 
 - [About](#about)
 - [Getting Started](#getting_started)
@@ -42,3 +43,4 @@ npm run dev
 // press o to open in your default browser
 
 ```
+
